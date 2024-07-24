@@ -1,0 +1,52 @@
+/* BirthdayComponent.css
+.birthday-card {
+    position: relative;
+  }
+  
+  .birthday-cap {
+    top: -50px;
+    left: -30px;
+    rotate: -20deg;
+  }
+  
+  .animate-cap .birthday-cap {
+    animation: capAnimation 2s ease-in-out forwards;
+  }
+  
+  @keyframes capAnimation {
+    from {
+      transform: translate(-20px, -20px) rotate(-30deg);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0) rotate(0);
+      opacity: 1;
+    }
+  } */
+  
+
+  /* Birthday.css */
+.birthday-card {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-cap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.birthday-cap {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  rotate: -20deg;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 0.5s ease;
+}
+
+.birthday-card:hover .birthday-cap {
+  transform: translateX(-50%) translateY(-50%) scale(1.1);
+}

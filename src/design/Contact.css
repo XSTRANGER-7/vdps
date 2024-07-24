@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.relative label {
+  position: absolute;
+  left: 0.75rem;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  top: 50%;
+}
+
+.relative input:not(:placeholder-shown) + label,
+.relative input:focus + label,
+.relative textarea:not(:placeholder-shown) + label,
+.relative textarea:focus + label,
+.relative select:not(:placeholder-shown) + label,
+.relative select:focus + label {
+  top: 0.525rem;
+  font-size: 0.75rem;
+  color: #6b46c1;
+}
+
+.relative input:placeholder-shown + label,
+.relative textarea:placeholder-shown + label,
+.relative select:placeholder-shown + label {
+  top:70%;
+  transform: translateY(70%);
+  font-size: 1rem;
+  color: #a0aec0;
+}
+
+.relative select:placeholder-shown {
+  color: #a0aec0;
+}
