@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emailjs/browser": "^4.4.1",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
