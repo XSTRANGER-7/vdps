@@ -4,11 +4,11 @@ import { gsap } from 'gsap';
 import New from "../assets/new.png";
 
 const notices = [
-  { text: "Annual Circular 2024-25", link: "path/to/notice1.pdf" },
-  { text: "Parent-teacher meeting on 20th August", link: "path/to/notice2.pdf" },
-  { text: "New library books available", link: "path/to/notice3.pdf" },
-  { text: "Annual sports day on 25th August", link: "path/to/notice4.pdf" },
-  { text: "School picnic on 1st September", link: "path/to/notice5.pdf" }
+  { text: "Annual Circular 2024-25", link: "#" },
+  { text: "Parent-teacher meeting on 20th August", link: "#" },
+  { text: "New library books available", link: "#" },
+  { text: "Annual sports day on 25th August", link: "#" },
+  { text: "School picnic on 1st September", link: "#" }
 ];
 
 const Noticeboard = () => {

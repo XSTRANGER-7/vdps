@@ -54,7 +54,7 @@ const DirectorMessage = () => {
         className="w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-tl-3xl rounded-br-3xl border-2 border-sky-600  mx-4 lg:mx-12 mb-4 md:mb-0"
       />
       <div className="md:flex-1 flex flex-col justify-center items-center">
-        <h2 className="text-xl sm:text-2xl font-bold mb-3 flex text-center">Message from the Director</h2> 
+        <h2 className="text-xl sm:text-3xl font-bold mb-8 flex text-center">Message from the Director</h2> 
         <p ref={messageRef} className="text-sm sm:text-base text-center text-gray-700">
           Welcome to our school! We are committed to providing an excellent education and fostering a supportive environment.
           We look forward to a wonderful year of growth and achievement. As we embark on another exciting academic year, remember that education is the key to unlocking your potential and achieving your dreams. Embrace each challenge as an opportunity to grow and learn. Your hard work and dedication will shape your future and make a difference in the world. Always strive for excellence, support one another, and never hesitate to ask for help. Together, we can achieve great things and build a brighter tomorrow. Believe in yourselves, stay focused, and let your passion for learning guide you to success.

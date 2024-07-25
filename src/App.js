@@ -12,6 +12,7 @@ import EventPage from './components/EventPage';
 import Contact from './components/Contact';  
 import Birthday from './components/Birthday';
 import Achievement from './components/Achievement';
+import FacilityDetail from "./components/FacilityDetail";
 // import './App.css';
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/event/:eventId" element={<EventPage />} />
         <Route path="/achievement" element={<Achievement />} /> 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/facility/:id" element={<FacilityDetail />} />
       </Routes>
       <Footer />
     </Router>

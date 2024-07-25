@@ -6,7 +6,7 @@ import capIcon from '../assets/cap.png';
 const Birthday = () => {
   // const today = new Date().toISOString().split('T')[0]; //Time showing of UTC   //YYYY-MM-DD
   const today = new Date().toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' });  //DD/M/YYYY
-  console.log(today);
+  // console.log(today);
   const [animatedCards, setAnimatedCards] = useState(new Set());
 
   const observer = useRef(
@@ -33,8 +33,7 @@ const Birthday = () => {
     return () => {
       elements.forEach((element) => observer.current.unobserve(element));
     };
-  }, []);
-  console.log(animatedCards);
+  }, [animatedCards]); 
 
   const todaysBirthdays = students.filter(
     (student) => student.birthday === today
