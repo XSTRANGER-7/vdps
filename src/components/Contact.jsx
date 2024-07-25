@@ -6,6 +6,7 @@ import Lottie from 'lottie-react';
 import contactAnimation from '../assets/Animation - 1715645682661.json';
 import "../design/Contact.css"; // Add your Lottie animation JSON file here
 import tick from "../assets/yes.png";
+import wrong from "../assets/no.png";
 import { BallTriangle } from 'react-loader-spinner';
 
 const Contact = () => {
@@ -21,6 +22,7 @@ const Contact = () => {
   const [rel, setRel] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const onSubmit = async (data) => {
     try {
@@ -38,8 +40,11 @@ const Contact = () => {
       console.log('Email successfully sent!', result.text);
       reset();
       setIsSubmitted(true);
+      setIsError(false);
     } catch (error) {
       console.error('Failed to send email. Error:', error.text);
+      setIsSubmitted(false);
+      setIsError(true);
     } finally {
       setIsLoading(false);
     }
@@ -60,13 +65,20 @@ const Contact = () => {
           </div>
         </div>
         {isSubmitted ? (
-          <div className="flex w-full py-8 px-6  md:w-1/2 flex-col justify-center items-center">
-            <div className='border-2 flex flex-col justify-center items-center gap-6 sm:gap-8 border-gray-500 bg-slate-100 px-2 sm:px-8 py-20 rounded'>
+          <div className="flex w-full py-20 px-6  md:w-1/2 flex-col justify-center items-center">
+            <div className='border-2 flex flex-col justify-center items-center gap-6 sm:gap-8 border-gray-500 bg-slate-100 px-2 sm:px-8 py-24 rounded'>
               <div className='rounded-full'><img src={tick} alt="" className='w-28 sm:w-40' /></div>
               <h2 className='font-semibold text-sm sm:text-lg text-green-500'>Message has been sent successfully!</h2>
             </div>
           </div>
-        ) : (
+        ) : isError ? (
+            <div className="flex w-full py-20 px-6 md:w-1/2 flex-col justify-center items-center">
+              <div className='border-2 flex flex-col justify-center items-center gap-6 sm:gap-8 border-gray-500 bg-slate-100 px-12 sm:px-16 py-20 rounded'>
+                <div className='rounded-full'><img src={wrong} alt="Error" className='w-32 sm:w-40' /></div>
+                <h2 className='font-semibold text-md sm:text-lg text-red-500'>Some error occurred</h2>
+              </div>
+            </div>
+          ): (
           <div className="relative md:w-1/2 p-6">
             {isLoading && (
               <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-40 z-10">
