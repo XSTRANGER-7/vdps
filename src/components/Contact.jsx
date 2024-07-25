@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React ,{useState} from 'react';
 import { useForm } from 'react-hook-form';
 import { send } from '@emailjs/browser';
 import Lottie from 'lottie-react';
@@ -13,14 +13,20 @@ const Contact = () => {
     formState: { errors },
     reset,
   } = useForm();
+  const [name,setName] = useState('');
+  const [num,setNum] = useState('');
+  const [mail,setMail] = useState('');
+  const [rel,setRel] = useState('');
 
   const onSubmit = async (data) => {
-    try {
+    try {  
+      const fullname = `${name} , MOBILE NO. is ${num} , MAIL ID is ${mail} and relation is ${rel}`;
+    //   console.log(fullname);
       const result = await send(
         'service_gmxp52l',
         'template_0cksyhp',
         {
-            from_name: data.name,
+            from_name: fullname,
             from_email: data.email,
             message: data.message,
         },
@@ -53,10 +59,11 @@ const Contact = () => {
             <div className="relative">
               <input
                 type="text"
-                // {...register('name', { required: true })}
+                required
                 className="w-full px-3 py-3.5 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 peer"
-                placeholder=""
-                name='from_name'
+                placeholder=" "
+                onChange={(e) => setName(e.target.value)}
+                name='name'
               />
               <label className="absolute left-3 top-2.5 text-gray-800 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-focus:top-2.5 peer-focus:text-purple-600 peer-focus:text-xs peer-placeholder-shown:text-lg">
                 Name
@@ -68,7 +75,8 @@ const Contact = () => {
                 type="tel"
                 {...register('mobile', { required: true, pattern: /^[0-9]{10}$/ })}
                 className="w-full px-3 py-3.5 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 peer"
-                placeholder=""
+                placeholder=" "
+                onChange={(e) => setNum(e.target.value)} 
               />
               <label className="absolute left-3 top-2.5 text-gray-800 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-focus:top-2.5 peer-focus:text-purple-600 peer-focus:text-xs peer-placeholder-shown:text-lg">
                 Mobile No
@@ -80,8 +88,10 @@ const Contact = () => {
                 type="email"
                 // {...register('email', { required: true })}
                 className="w-full px-3 py-3.5 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 peer"
-                placeholder=""
-                name='from_email' 
+                placeholder=" "
+                name='email' 
+                required
+                onChange={(e) => setMail(e.target.value)}
               />
               <label className="absolute left-3 top-2.5 text-gray-800 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-focus:top-2.5 peer-focus:text-purple-600 peer-focus:text-xs peer-placeholder-shown:text-lg">
                 Email
@@ -90,9 +100,11 @@ const Contact = () => {
             </div>
             <div className="relative">
               <select
-                {...register('relation', { required: true })}
+                // {...register('relation', { required: true })}
                 className="w-full px-3 py-3.5 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 peer"
                 defaultValue=""
+                required
+                onChange={(e) => setRel(e.target.value)}
               >
                 <option value="" className='' disabled hidden>Relation</option>
                 <option value="student">Student</option>
