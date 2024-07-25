@@ -5,6 +5,7 @@ import { send } from '@emailjs/browser';
 import Lottie from 'lottie-react';
 import contactAnimation from '../assets/Animation - 1715645682661.json';
 import "../design/Contact.css"; // Add your Lottie animation JSON file here
+import tick from "../assets/yes.png";
 
 const Contact = () => {
   const {
@@ -17,6 +18,7 @@ const Contact = () => {
   const [num,setNum] = useState('');
   const [mail,setMail] = useState('');
   const [rel,setRel] = useState('');
+  const [isSubmitted,setIsSubmitted] = useState(false);
 
   const onSubmit = async (data) => {
     try {  
@@ -27,19 +29,22 @@ const Contact = () => {
         'template_0cksyhp',
         {
             from_name: fullname,
-            from_email: data.email,
+            // from_email: data.email,
             message: data.message,
         },
         process.env.REACT_APP_EMAILJS_USER_ID
       );
       console.log('Email successfully sent!', result.text);
       reset();
+      setIsSubmitted(true);
+
     } catch (error) {
       console.error('Failed to send email. Error:', error.text);
     }
   };
 
   return (
+    
     <div className="flex flex-col items-center justify-start bg-purple-300 py-6">
       <div className="max-w-7xl w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
         <div className="md:w-1/2 p-6 bg-gradient-to-r from-purple-600 to-orange-400 text-white flex flex-col justify-between items-center md:items-start">
@@ -53,6 +58,15 @@ const Contact = () => {
             <Lottie animationData={contactAnimation} loop={true} className="w-64" />
           </div>
         </div>
+        {isSubmitted ? (
+        <div className="flex w-1/2 flex-col justify-center items-center">
+        <div className='border-2 flex flex-col justify-center items-center gap-8 border-gray-500 bg-slate-100 px-8 py-20 rounded'>
+          <div className='rounded-full'><img src={tick} alt="" className='w-40'/></div>
+          <h2 className='font-semibold text-lg text-green-500'>Message has been sent successfully!</h2>
+        </div>
+        </div>
+      ) : (
+
         <div className="md:w-1/2 p-6">
           <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -138,6 +152,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
+      )}
       </div>
     </div>
   );
