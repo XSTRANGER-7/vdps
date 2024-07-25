@@ -31,9 +31,9 @@ body {
   top:70%;
   transform: translateY(70%);
   font-size: 1rem;
-  color: #a0aec0;
+  color: #343333;
 }
 
 .relative select:placeholder-shown {
-  color: #a0aec0;
+  color: #474848;
 }
