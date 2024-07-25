@@ -51,9 +51,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start bg-purple-300 py-6">
-      <div className="max-w-7xl w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
-        <div className="md:w-1/2 p-6 bg-gradient-to-r from-purple-600 to-orange-400 text-white flex flex-col justify-between items-center md:items-start">
+    <div className="flex flex-col items-center justify-start bg-purple-300 py-0 md:py-6">
+      <div className="max-w-7xl w-full bg-white md:rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+        <div className="md:w-1/2 p-2 sm:p-6 bg-gradient-to-r from-purple-600 to-orange-400 text-white flex flex-col justify-between items-center md:items-start">
           <div className="p-6">
             <h2 className="text-4xl font-bold mb-6">Contact Details</h2>
             <p className="text-xl font-semibold mb-4">Timings: 8:00 AM - 2:00 PM</p>

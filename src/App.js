@@ -1,16 +1,3 @@
-
-
-// function App() {
-//   return (
-//     <div className="App text-xl bg-black h-screen">
-//       h
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
@@ -21,8 +8,10 @@ import About from './components/About';
 import Faculty from './components/Faculty';
 import Admissions from './components/Admission';
 import Gallery from './components/Gallery';
+import EventPage from './components/EventPage';
 import Contact from './components/Contact';  
 import Birthday from './components/Birthday';
+import Achievement from './components/Achievement';
 // import './App.css';
 
 const App = () => {
@@ -36,6 +25,8 @@ const App = () => {
         <Route path="/faculty" element={<Faculty />} />
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/gallery" element={<Gallery />} /> 
+        <Route path="/event/:eventId" element={<EventPage />} />
+        <Route path="/achievement" element={<Achievement />} /> 
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

@@ -22,13 +22,14 @@ const Navbar = () => {
   
   return (
     <nav className="navbar bg-gradient-to-r from-purple-600 to-orange-400 text-white">
-      <div className="container mx-auto flex justify-between items-center py-1 md:py-4 px-8 md:px-16">
-        <div className="hidden md:flex space-x-4 gap-7 font-semibold">
+      <div className="container mx-0 flex justify-between items-center py-1 md:py-4 px-8 md:px-12">
+        <div className="hidden md:flex space-x-4 md:gap-5 lg:gap-8 font-semibold">
           <Link to="/" className="text-white hover:text-gray-300">Home</Link>
           <Link to="#" onClick={handleBirthdayClick} className="text-white hover:text-gray-300">Birthdays</Link>
           <Link to="/faculty" className="text-white hover:text-gray-300">Faculty</Link>
           <Link to="/admissions" className="text-white hover:text-gray-300">Admissions</Link>
           <Link to="/gallery" className="text-white hover:text-gray-300">Gallery</Link>
+          <Link to="/achievement" className="text-white hover:text-gray-300">Achievement</Link>
           <Link to="/contact" className="text-white hover:text-gray-300">Contact</Link>
         </div>
         <div className="md:hidden">
@@ -79,6 +80,7 @@ const Navbar = () => {
               <Link to="/faculty" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Faculty</Link>
               <Link to="/admissions" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Admissions</Link>
               <Link to="/gallery" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Gallery</Link>
+              <Link to="/achievement" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Achievement</Link>
               <Link to="/contact" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Contact</Link>
             </div>
           </div>
