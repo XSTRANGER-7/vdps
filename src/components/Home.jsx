@@ -14,13 +14,11 @@ const Home = () => {
 
   useEffect(() => {
     const hash = location.hash; // Check hash fragment on every render
-    const birthdayElement = birthdayRef.current;
-    console.log("be",birthdayElement,"h", hash);
+    const birthdayElement = birthdayRef.current; 
     if (birthdayElement && hash === '#birthday') {
       // More precise scrolling (optional):
       const navbarHeight = document.querySelector('.navbar').offsetHeight || 0;
-      // const navbarHeight = 2;
-      console.log("navbarHeight",navbarHeight);
+      // const navbarHeight = 2; 
       birthdayElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',

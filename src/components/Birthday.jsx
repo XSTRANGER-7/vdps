@@ -4,7 +4,9 @@ import '../design/Birthday.css';
 import capIcon from '../assets/cap.png';
 
 const Birthday = () => {
-  const today = new Date().toISOString().split('T')[0];
+  // const today = new Date().toISOString().split('T')[0]; //Time showing of UTC   //YYYY-MM-DD
+  const today = new Date().toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' });  //DD/M/YYYY
+  console.log(today);
   const [animatedCards, setAnimatedCards] = useState(new Set());
 
   const observer = useRef(
@@ -12,12 +14,12 @@ const Birthday = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const cardId = entry.target.getAttribute('data-id');
+            const cardId = entry.target.getAttribute('data-id'); 
             if (!animatedCards.has(cardId)) {
               setAnimatedCards((prev) => new Set(prev).add(cardId));
             }
             observer.current.unobserve(entry.target);
-          }
+          } 
         });
       },
       { threshold: 0.9 }
@@ -31,12 +33,12 @@ const Birthday = () => {
     return () => {
       elements.forEach((element) => observer.current.unobserve(element));
     };
-  }, [animatedCards]);
+  }, []);
+  console.log(animatedCards);
 
   const todaysBirthdays = students.filter(
     (student) => student.birthday === today
-  );
-
+  ); 
   return (
     <div className="p-6 bg-gradient-to-r from-purple-600 to-orange-400" id="birthday">
       <h1 className="text-3xl font-bold text-center mb-8 text-white">Today's Birthdays</h1>

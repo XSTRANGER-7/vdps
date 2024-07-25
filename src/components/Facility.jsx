@@ -77,7 +77,7 @@ const Facility = () => {
           <div
             key={index}
             data-id={`facility-${index}`}
-            className={`bg-pink-200 border border-gray-300 rounded-lg shadow-lg overflow-hidden hover:bg-white-300 cursor-pointer facility-card ${animatedCards.has(`facility-${index}`) ? 'animate-fade-in' : ''}`}
+            className={`bg-pink-200 border border-gray-300 rounded-lg shadow-lg overflow-hidden hover:bg-white-300 cursor-pointer hover:opacity-85 facility-card ${animatedCards.has(`facility-${index}`) ? 'animate-fade-in' : ''}`}
           >
             <img src={facility.image} alt={facility.heading} className="w-full h-48 object-contain" />
             <div className="p-4">

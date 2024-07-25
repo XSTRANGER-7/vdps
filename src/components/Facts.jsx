@@ -56,19 +56,19 @@ const Facts = () => {
         <h1 className="text-3xl font-bold mt-10 mb-10">Key Facts</h1>
       </div>
       <div className=" flex gap-12 sm:gap-0 lg:gap-4 flex-col sm:flex-row justify-around p-6">
-        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
+        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 hover:bg-purple-400 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
           <h2 className="text-xl font-semibold mb-2">Labs</h2>
           <p className="text-3xl font-bold">{labs}</p>
         </div>
-        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
+        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 hover:bg-purple-400 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
           <h2 className="text-xl font-semibold mb-2">Alumni</h2>
           <p className="text-3xl font-bold">{alumni}</p>
         </div>
-        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
+        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 hover:bg-purple-400 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
           <h2 className="text-xl font-semibold mb-2">Staff Members</h2>
           <p className="text-3xl font-bold">{staff}</p>
         </div>
-        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
+        <div className="flex-1 mx-4 px-3 py-10 md:px-4 md:py-8 hover:bg-purple-400 border border-gray-300 rounded-lg bg-purple-300 shadow-lg text-center">
           <h2 className="text-xl font-semibold mb-2">Students</h2>
           <p className="text-3xl font-bold">{students}</p>
         </div>

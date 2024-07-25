@@ -12,7 +12,7 @@ const GalleryPage = () => {
           <Link 
             to={`/event/${photoGroup.eventId}`} 
             key={index} 
-            className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+            className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center hover:opacity-85"
           >
             <div className="relative w-full h-56 sm:h-60 md:h-72">
               <img
