@@ -11,7 +11,7 @@ import Gallery from './components/Gallery';
 import EventPage from './components/EventPage';
 import Contact from './components/Contact';  
 import Birthday from './components/Birthday';
-import Achievement from './components/Achievement';
+import Result from './components/Result';
 import FacilityDetail from "./components/FacilityDetail";
 // import './App.css';
 
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/gallery" element={<Gallery />} /> 
         <Route path="/event/:eventId" element={<EventPage />} />
-        <Route path="/achievement" element={<Achievement />} /> 
+        <Route path="/result" element={<Result />} /> 
         <Route path="/contact" element={<Contact />} />
         <Route path="/facility/:id" element={<FacilityDetail />} />
       </Routes>

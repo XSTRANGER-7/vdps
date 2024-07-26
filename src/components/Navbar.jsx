@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link to="/faculty" className="text-white hover:text-gray-300">Faculty</Link>
           <Link to="/admissions" className="text-white hover:text-gray-300">Admissions</Link>
           <Link to="/gallery" className="text-white hover:text-gray-300">Gallery</Link>
-          <Link to="/achievement" className="text-white hover:text-gray-300">Achievement</Link>
+          <Link to="/result" className="text-white hover:text-gray-300">Results</Link>
           <Link to="/contact" className="text-white hover:text-gray-300">Contact</Link>
         </div>
         <div className="md:hidden">
@@ -80,7 +80,7 @@ const Navbar = () => {
               <Link to="/faculty" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Faculty</Link>
               <Link to="/admissions" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Admissions</Link>
               <Link to="/gallery" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Gallery</Link>
-              <Link to="/achievement" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Achievement</Link>
+              <Link to="/result" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Results</Link>
               <Link to="/contact" onClick={handleMenuClose} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300">Contact</Link>
             </div>
           </div>
