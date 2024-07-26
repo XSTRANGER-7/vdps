@@ -1,4 +1,4 @@
-// FactsComponent.jsx
+
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
