@@ -4,7 +4,7 @@ import Bus from "../assets/bus.png";
 import Academic from "../assets/academic.png";
 import Infra from "../assets/infrast.png";
 import Sports from "../assets/sport.png";
-import Hostel from "../assets/host.png";
+import Hostel from "../assets/coming-soon.png";
 import Creative from "../assets/creative.png";
 
 const facilityData = [
@@ -25,8 +25,8 @@ const facilityData = [
   },
   {
     image: Hostel,
-    heading: 'Day Boarding',
-    text: 'Comfortable and well-managed day boarding facilities for students.',
+    heading: '',
+    text: '',
   },
   {
     image: Bus,
