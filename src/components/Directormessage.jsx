@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import img from "../assets/director_img.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,9 +54,9 @@ const DirectorMessage = () => {
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <img
           ref={imageRef}
-          src="https://imgs.search.brave.com/sm7J1DTz9ujxr0g0cYLGyG-NdgEAkrK-lsnomPXavN0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NDE1MTYxNjAwNzEt/NGJiMGM1YWY2NWJh/P2ZtPWpwZyZ3PTMw/MDAmYXV0bz1mb3Jt/YXQmZml0PWNyb3Am/cT02MCZpeGxpYj1y/Yi00LjAuMyZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1UaDhmSEJvYjNS/dlozSmhjR2g1ZkdW/dWZEQjhmREI4Zkh3/dw" // Replace with the actual image URL
+          src={img} // Replace with the actual image URL
           alt="Director"
-          className="w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-tl-3xl rounded-br-3xl border-2 border-sky-600  mx-4 lg:mx-12 mb-4 md:mb-0"
+          className="w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-tl-3xl rounded-br-3xl border-2 border-gray-700  mx-4 lg:mx-12 mb-4 md:mb-0"
         />
         
         <h1 className="text-2xl font-bold">Mr. Sudhir Gupta</h1>
