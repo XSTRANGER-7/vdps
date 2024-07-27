@@ -13,11 +13,12 @@ import Contact from './components/Contact';
 import Birthday from './components/Birthday';
 import Result from './components/Result';
 import FacilityDetail from "./components/FacilityDetail";
-// import './App.css';
+import Loader from './components/Loader'; 
 
 const App = () => {
   return (
     <Router>
+      <Loader/>
       <Header />
       <Navbar/>  
       <Routes>
