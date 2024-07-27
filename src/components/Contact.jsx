@@ -8,6 +8,7 @@ import "../design/Contact.css"; // Add your Lottie animation JSON file here
 import tick from "../assets/yes.png";
 import wrong from "../assets/no.png";
 import { BallTriangle } from 'react-loader-spinner';
+import SEO from './SEO';
 
 const Contact = () => {
   const {
@@ -52,6 +53,13 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col items-center justify-start bg-purple-300 py-0 md:py-6">
+      <SEO
+      title="Contact Page - Vidya Deep Public School Website"
+      description="Welcome to the Contact page of VDPS website.Vidya deep public school contact page . contact page. help desk vdps. enquiry vdps. vdps website babarpur. top achools in auraiya . top schools in etawah."
+      keywords="contact page, home, website, help center, contact, timings vdps, contact form, fees details, VDPS, vdps, ajitmal, babarpur, best schools, top schools, auraiya, etawah, vidya deep public school, vidya deep public school babarpur, vdps ajitmal, vdps auraiya, top schools babarpur, top schools up, top private schools, up board school in auraiya, cbse schools in auraiya"
+      image="https://vidyadeeppublicschool.vercel.app/path/to/img.jpg"
+      url="https://vidyadeeppublicschool.vercel.app/contact"
+    />
       <div className="max-w-7xl w-full bg-white md:rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
         <div className="md:w-1/2 p-2 sm:p-6 bg-gradient-to-r from-purple-600 to-orange-400 text-white flex flex-col justify-between items-center md:items-start">
           <div className="p-6">

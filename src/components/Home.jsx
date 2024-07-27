@@ -6,7 +6,8 @@ import DirectorMessage from './Directormessage';
 import Facts from './Facts';
 import Facility from './Facility';
 import Birthday from './Birthday';
-import {useLocation} from 'react-router-dom';
+import {useLocation} from 'react-router-dom'; 
+import SEO from "./SEO";
 
 const Home = () => {  
   const birthdayRef = useRef(null); // Reference to the Birthday section
@@ -29,6 +30,13 @@ const Home = () => {
   }, [location]);
   return (
     <div className="">
+      <SEO
+      title="Home Page - Vidya Deep Public School Website"
+      description="Welcome to the home page of VDPS website.Vidya deep public school home page . vdps website babarpur. top achools in auraiya . top schools in etawah."
+      keywords="main page, home, website, VDPS, vdps, ajitmal, babarpur, best schools, top schools, auraiya, etawah, vidya deep public school, vidya deep public school babarpur, vdps ajitmal, vdps auraiya, top schools babarpur, top schools up, top private schools, up board school in auraiya, cbse schools in auraiya"
+      image="https://vidyadeeppublicschool.vercel.app/path/to/img.jpg"
+      url="https://vidyadeeppublicschool.vercel.app"
+    />
       <div className='md:flex'>
         <Slider/>
         <Notice/>
