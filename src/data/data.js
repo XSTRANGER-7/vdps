@@ -33,17 +33,42 @@ export const students = [
     {
       name: 'Jane Smith',
       class: '6th Grade',
-      birthday: '2024-07-25',
+      birthday: '1/9/2024',
+    },
+    {
+      name: 'John Doe',
+      class: '11th Grade',
+      birthday: '2/9/2024',
     },
     {
       name: 'Mr. Sample1',
       class: '11th Grade',
-      birthday: '01/9/2024',
+      birthday: '3/9/2024',  
     },
     {
       name: 'Mr. Sample2',
       class: '11th Grade',
-      birthday: '1/9/2024',  
+      birthday: '4/9/2024',  
+    },
+    {
+      name: 'Mr. Sample3',
+      class: '11th Grade',
+      birthday: '5/9/2024',  
+    },
+    {
+      name: 'Mr. Sample4',
+      class: '11th Grade',
+      birthday: '6/9/2024',  
+    },
+    {
+      name: 'John Doe',
+      class: '11th Grade',
+      birthday: '7/9/2024',
+    },
+    {
+      name: 'Jane Smith',
+      class: '6th Grade',
+      birthday: '8/9/2024',
     },
     
     // Add more students as needed
