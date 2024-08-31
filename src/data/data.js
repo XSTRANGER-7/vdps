@@ -36,14 +36,14 @@ export const students = [
       birthday: '2024-07-25',
     },
     {
-      name: 'Mr. Sample',
+      name: 'Mr. Sample1',
       class: '11th Grade',
-      birthday: '26/7/2024',
+      birthday: '01/9/2024',
     },
     {
-      name: 'Mr. Sample',
+      name: 'Mr. Sample2',
       class: '11th Grade',
-      birthday: '26/7/2024',  
+      birthday: '1/9/2024',  
     },
     
     // Add more students as needed
